@@ -15,7 +15,7 @@ function App() {
 
   return (
     <div className="App">
-        <PayPalScriptProvider options={{ "client-id": process.env.CLIENT_ID }}>
+        <PayPalScriptProvider options={{ "client-id": process.env.REACT_APP_CLIENT_ID }}>
         {
           FUNDING_SOURCES.map(fundingSource=>{
             return(
