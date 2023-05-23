@@ -1,0 +1,1343 @@
+{
+  "name": "@paypalcorp/backend",
+  "version": "1.0.0",
+  "lockfileVersion": 2,
+  "requires": true,
+  "packages": {
+    "": {
+      "name": "@paypalcorp/backend",
+      "version": "1.0.0",
+      "license": "ISC",
+      "dependencies": {
+        "cors": "^2.8.5",
+        "dotenv": "^16.0.3",
+        "express": "^4.18.2",
+        "node-fetch": "^3.3.1",
+        "path": "^0.12.7"
+      }
+    },
+    "node_modules/accepts": {
+      "version": "1.3.8",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/accepts/-/accepts-1.3.8.tgz",
+      "integrity": "sha1-C/C+EltnAUrcsLCSHmLbe//hay4=",
+      "license": "MIT",
+      "dependencies": {
+        "mime-types": "~2.1.34",
+        "negotiator": "0.6.3"
+      },
+      "engines": {
+        "node": ">= 0.6"
+      }
+    },
+    "node_modules/array-flatten": {
+      "version": "1.1.1",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/array-flatten/-/array-flatten-1.1.1.tgz",
+      "integrity": "sha1-ml9pkFGx5wczKPKgCJaLZOopVdI=",
+      "license": "MIT"
+    },
+    "node_modules/body-parser": {
+      "version": "1.20.1",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/body-parser/-/body-parser-1.20.1.tgz",
+      "integrity": "sha1-sYEqiRLBlc03Gj7l5m+qIzilxmg=",
+      "license": "MIT",
+      "dependencies": {
+        "bytes": "3.1.2",
+        "content-type": "~1.0.4",
+        "debug": "2.6.9",
+        "depd": "2.0.0",
+        "destroy": "1.2.0",
+        "http-errors": "2.0.0",
+        "iconv-lite": "0.4.24",
+        "on-finished": "2.4.1",
+        "qs": "6.11.0",
+        "raw-body": "2.5.1",
+        "type-is": "~1.6.18",
+        "unpipe": "1.0.0"
+      },
+      "engines": {
+        "node": ">= 0.8",
+        "npm": "1.2.8000 || >= 1.4.16"
+      }
+    },
+    "node_modules/bytes": {
+      "version": "3.1.2",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/bytes/-/bytes-3.1.2.tgz",
+      "integrity": "sha1-iwvuuYYFrfGxKPpDhkA8AJ4CIaU=",
+      "license": "MIT",
+      "engines": {
+        "node": ">= 0.8"
+      }
+    },
+    "node_modules/call-bind": {
+      "version": "1.0.2",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/call-bind/-/call-bind-1.0.2.tgz",
+      "integrity": "sha1-sdTonmiBGcPJqQOtMKuy9qkZvjw=",
+      "license": "MIT",
+      "dependencies": {
+        "function-bind": "^1.1.1",
+        "get-intrinsic": "^1.0.2"
+      },
+      "funding": {
+        "url": "https://github.com/sponsors/ljharb"
+      }
+    },
+    "node_modules/content-disposition": {
+      "version": "0.5.4",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/content-disposition/-/content-disposition-0.5.4.tgz",
+      "integrity": "sha1-i4K076yCUSoCuwsdzsnSxejrW/4=",
+      "license": "MIT",
+      "dependencies": {
+        "safe-buffer": "5.2.1"
+      },
+      "engines": {
+        "node": ">= 0.6"
+      }
+    },
+    "node_modules/content-type": {
+      "version": "1.0.5",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/content-type/-/content-type-1.0.5.tgz",
+      "integrity": "sha1-i3cxYmVtHRCGeEyPI6VM5tc9eRg=",
+      "license": "MIT",
+      "engines": {
+        "node": ">= 0.6"
+      }
+    },
+    "node_modules/cookie": {
+      "version": "0.5.0",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/cookie/-/cookie-0.5.0.tgz",
+      "integrity": "sha1-0fXXGt7GVYxY84mYfDZqpH6ZT4s=",
+      "license": "MIT",
+      "engines": {
+        "node": ">= 0.6"
+      }
+    },
+    "node_modules/cookie-signature": {
+      "version": "1.0.6",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/cookie-signature/-/cookie-signature-1.0.6.tgz",
+      "integrity": "sha1-4wOogrNCzD7oylE6eZmXNNqzriw=",
+      "license": "MIT"
+    },
+    "node_modules/cors": {
+      "version": "2.8.5",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/cors/-/cors-2.8.5.tgz",
+      "integrity": "sha1-6sEdpRWS3Ya58G9uesKTs9+HXSk=",
+      "license": "MIT",
+      "dependencies": {
+        "object-assign": "^4",
+        "vary": "^1"
+      },
+      "engines": {
+        "node": ">= 0.10"
+      }
+    },
+    "node_modules/data-uri-to-buffer": {
+      "version": "4.0.1",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/data-uri-to-buffer/-/data-uri-to-buffer-4.0.1.tgz",
+      "integrity": "sha1-2P6ysogeak9YwuCKz9Dig04mIi4=",
+      "license": "MIT",
+      "engines": {
+        "node": ">= 12"
+      }
+    },
+    "node_modules/debug": {
+      "version": "2.6.9",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/debug/-/debug-2.6.9.tgz",
+      "integrity": "sha1-XRKFFd8TT/Mn6QpMk/Tgd6U2NB8=",
+      "license": "MIT",
+      "dependencies": {
+        "ms": "2.0.0"
+      }
+    },
+    "node_modules/depd": {
+      "version": "2.0.0",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/depd/-/depd-2.0.0.tgz",
+      "integrity": "sha1-tpYWPMdXVg0JzyLMj60Vcbeedt8=",
+      "license": "MIT",
+      "engines": {
+        "node": ">= 0.8"
+      }
+    },
+    "node_modules/destroy": {
+      "version": "1.2.0",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/destroy/-/destroy-1.2.0.tgz",
+      "integrity": "sha1-SANzVQmti+VSk0xn32FPlOZvoBU=",
+      "license": "MIT",
+      "engines": {
+        "node": ">= 0.8",
+        "npm": "1.2.8000 || >= 1.4.16"
+      }
+    },
+    "node_modules/dotenv": {
+      "version": "16.0.3",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/dotenv/-/dotenv-16.0.3.tgz",
+      "integrity": "sha1-EVrsQrrFBT2zxFbbMMwkOlqDagc=",
+      "license": "BSD-2-Clause",
+      "engines": {
+        "node": ">=12"
+      }
+    },
+    "node_modules/ee-first": {
+      "version": "1.1.1",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/ee-first/-/ee-first-1.1.1.tgz",
+      "integrity": "sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=",
+      "license": "MIT"
+    },
+    "node_modules/encodeurl": {
+      "version": "1.0.2",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/encodeurl/-/encodeurl-1.0.2.tgz",
+      "integrity": "sha1-rT/0yG7C0CkyL1oCw6mmBslbP1k=",
+      "license": "MIT",
+      "engines": {
+        "node": ">= 0.8"
+      }
+    },
+    "node_modules/escape-html": {
+      "version": "1.0.3",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/escape-html/-/escape-html-1.0.3.tgz",
+      "integrity": "sha1-Aljq5NPQwJdN4cFpGI7wBR0dGYg=",
+      "license": "MIT"
+    },
+    "node_modules/etag": {
+      "version": "1.8.1",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/etag/-/etag-1.8.1.tgz",
+      "integrity": "sha1-Qa4u62XvpiJorr/qg6x9eSmbCIc=",
+      "license": "MIT",
+      "engines": {
+        "node": ">= 0.6"
+      }
+    },
+    "node_modules/express": {
+      "version": "4.18.2",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/express/-/express-4.18.2.tgz",
+      "integrity": "sha1-P6vggpbpMMeWwZ48UWl5OGup/Vk=",
+      "license": "MIT",
+      "dependencies": {
+        "accepts": "~1.3.8",
+        "array-flatten": "1.1.1",
+        "body-parser": "1.20.1",
+        "content-disposition": "0.5.4",
+        "content-type": "~1.0.4",
+        "cookie": "0.5.0",
+        "cookie-signature": "1.0.6",
+        "debug": "2.6.9",
+        "depd": "2.0.0",
+        "encodeurl": "~1.0.2",
+        "escape-html": "~1.0.3",
+        "etag": "~1.8.1",
+        "finalhandler": "1.2.0",
+        "fresh": "0.5.2",
+        "http-errors": "2.0.0",
+        "merge-descriptors": "1.0.1",
+        "methods": "~1.1.2",
+        "on-finished": "2.4.1",
+        "parseurl": "~1.3.3",
+        "path-to-regexp": "0.1.7",
+        "proxy-addr": "~2.0.7",
+        "qs": "6.11.0",
+        "range-parser": "~1.2.1",
+        "safe-buffer": "5.2.1",
+        "send": "0.18.0",
+        "serve-static": "1.15.0",
+        "setprototypeof": "1.2.0",
+        "statuses": "2.0.1",
+        "type-is": "~1.6.18",
+        "utils-merge": "1.0.1",
+        "vary": "~1.1.2"
+      },
+      "engines": {
+        "node": ">= 0.10.0"
+      }
+    },
+    "node_modules/fetch-blob": {
+      "version": "3.2.0",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/fetch-blob/-/fetch-blob-3.2.0.tgz",
+      "integrity": "sha1-8JuNS71Frcbwwgt+eH55PjCdzOk=",
+      "funding": [
+        {
+          "type": "github",
+          "url": "https://github.com/sponsors/jimmywarting"
+        },
+        {
+          "type": "paypal",
+          "url": "https://paypal.me/jimmywarting"
+        }
+      ],
+      "license": "MIT",
+      "dependencies": {
+        "node-domexception": "^1.0.0",
+        "web-streams-polyfill": "^3.0.3"
+      },
+      "engines": {
+        "node": "^12.20 || >= 14.13"
+      }
+    },
+    "node_modules/finalhandler": {
+      "version": "1.2.0",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/finalhandler/-/finalhandler-1.2.0.tgz",
+      "integrity": "sha1-fSP+VzGyB7RkDk/NAK7B+SB6ezI=",
+      "license": "MIT",
+      "dependencies": {
+        "debug": "2.6.9",
+        "encodeurl": "~1.0.2",
+        "escape-html": "~1.0.3",
+        "on-finished": "2.4.1",
+        "parseurl": "~1.3.3",
+        "statuses": "2.0.1",
+        "unpipe": "~1.0.0"
+      },
+      "engines": {
+        "node": ">= 0.8"
+      }
+    },
+    "node_modules/formdata-polyfill": {
+      "version": "4.0.10",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/formdata-polyfill/-/formdata-polyfill-4.0.10.tgz",
+      "integrity": "sha1-JIB8McnUAuACqz2McgFEzriEhCM=",
+      "license": "MIT",
+      "dependencies": {
+        "fetch-blob": "^3.1.2"
+      },
+      "engines": {
+        "node": ">=12.20.0"
+      }
+    },
+    "node_modules/forwarded": {
+      "version": "0.2.0",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/forwarded/-/forwarded-0.2.0.tgz",
+      "integrity": "sha1-ImmTZCiq1MFcfr6XeahL8LKoGBE=",
+      "license": "MIT",
+      "engines": {
+        "node": ">= 0.6"
+      }
+    },
+    "node_modules/fresh": {
+      "version": "0.5.2",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/fresh/-/fresh-0.5.2.tgz",
+      "integrity": "sha1-PYyt2Q2XZWn6g1qx+OSyOhBWBac=",
+      "license": "MIT",
+      "engines": {
+        "node": ">= 0.6"
+      }
+    },
+    "node_modules/function-bind": {
+      "version": "1.1.1",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/function-bind/-/function-bind-1.1.1.tgz",
+      "integrity": "sha1-pWiZ0+o8m6uHS7l3O3xe3pL0iV0=",
+      "license": "MIT"
+    },
+    "node_modules/get-intrinsic": {
+      "version": "1.2.1",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/get-intrinsic/-/get-intrinsic-1.2.1.tgz",
+      "integrity": "sha1-0pVkT+1FBfyc3pUsN+4StHeoPYI=",
+      "license": "MIT",
+      "dependencies": {
+        "function-bind": "^1.1.1",
+        "has": "^1.0.3",
+        "has-proto": "^1.0.1",
+        "has-symbols": "^1.0.3"
+      },
+      "funding": {
+        "url": "https://github.com/sponsors/ljharb"
+      }
+    },
+    "node_modules/has": {
+      "version": "1.0.3",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/has/-/has-1.0.3.tgz",
+      "integrity": "sha1-ci18v8H2qoJB8W3YFOAR4fQeh5Y=",
+      "license": "MIT",
+      "dependencies": {
+        "function-bind": "^1.1.1"
+      },
+      "engines": {
+        "node": ">= 0.4.0"
+      }
+    },
+    "node_modules/has-proto": {
+      "version": "1.0.1",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/has-proto/-/has-proto-1.0.1.tgz",
+      "integrity": "sha1-GIXBMFU4lYr/Rp/vN5N8InlUCOA=",
+      "license": "MIT",
+      "engines": {
+        "node": ">= 0.4"
+      },
+      "funding": {
+        "url": "https://github.com/sponsors/ljharb"
+      }
+    },
+    "node_modules/has-symbols": {
+      "version": "1.0.3",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/has-symbols/-/has-symbols-1.0.3.tgz",
+      "integrity": "sha1-u3ssQ0klHc6HsSX3vfh0qnyLOfg=",
+      "license": "MIT",
+      "engines": {
+        "node": ">= 0.4"
+      },
+      "funding": {
+        "url": "https://github.com/sponsors/ljharb"
+      }
+    },
+    "node_modules/http-errors": {
+      "version": "2.0.0",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/http-errors/-/http-errors-2.0.0.tgz",
+      "integrity": "sha1-t3dKFIbvc892Z6ya4IWMASxXudM=",
+      "license": "MIT",
+      "dependencies": {
+        "depd": "2.0.0",
+        "inherits": "2.0.4",
+        "setprototypeof": "1.2.0",
+        "statuses": "2.0.1",
+        "toidentifier": "1.0.1"
+      },
+      "engines": {
+        "node": ">= 0.8"
+      }
+    },
+    "node_modules/iconv-lite": {
+      "version": "0.4.24",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/iconv-lite/-/iconv-lite-0.4.24.tgz",
+      "integrity": "sha1-ICK0sl+93CHS9SSXSkdKr+czkIs=",
+      "license": "MIT",
+      "dependencies": {
+        "safer-buffer": ">= 2.1.2 < 3"
+      },
+      "engines": {
+        "node": ">=0.10.0"
+      }
+    },
+    "node_modules/inherits": {
+      "version": "2.0.4",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/inherits/-/inherits-2.0.4.tgz",
+      "integrity": "sha1-D6LGT5MpF8NDOg3tVTY6rjdBa3w=",
+      "license": "ISC"
+    },
+    "node_modules/ipaddr.js": {
+      "version": "1.9.1",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/ipaddr.js/-/ipaddr.js-1.9.1.tgz",
+      "integrity": "sha1-v/OFQ+64mEglB5/zoqjmy9RngbM=",
+      "license": "MIT",
+      "engines": {
+        "node": ">= 0.10"
+      }
+    },
+    "node_modules/media-typer": {
+      "version": "0.3.0",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/media-typer/-/media-typer-0.3.0.tgz",
+      "integrity": "sha1-hxDXrwqmJvj/+hzgAWhUUmMlV0g=",
+      "license": "MIT",
+      "engines": {
+        "node": ">= 0.6"
+      }
+    },
+    "node_modules/merge-descriptors": {
+      "version": "1.0.1",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/merge-descriptors/-/merge-descriptors-1.0.1.tgz",
+      "integrity": "sha1-sAqqVW3YtEVoFQ7J0blT8/kMu2E=",
+      "license": "MIT"
+    },
+    "node_modules/methods": {
+      "version": "1.1.2",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/methods/-/methods-1.1.2.tgz",
+      "integrity": "sha1-VSmk1nZUE07cxSZmVoNbD4Ua/O4=",
+      "license": "MIT",
+      "engines": {
+        "node": ">= 0.6"
+      }
+    },
+    "node_modules/mime": {
+      "version": "1.6.0",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/mime/-/mime-1.6.0.tgz",
+      "integrity": "sha1-Ms2eXGRVO9WNGaVor0Uqz/BJgbE=",
+      "license": "MIT",
+      "bin": {
+        "mime": "cli.js"
+      },
+      "engines": {
+        "node": ">=4"
+      }
+    },
+    "node_modules/mime-db": {
+      "version": "1.52.0",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/mime-db/-/mime-db-1.52.0.tgz",
+      "integrity": "sha1-u6vNwChZ9JhzAchW4zh85exDv3A=",
+      "license": "MIT",
+      "engines": {
+        "node": ">= 0.6"
+      }
+    },
+    "node_modules/mime-types": {
+      "version": "2.1.35",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/mime-types/-/mime-types-2.1.35.tgz",
+      "integrity": "sha1-OBqHG2KnNEUGYK497uRIE/cNlZo=",
+      "license": "MIT",
+      "dependencies": {
+        "mime-db": "1.52.0"
+      },
+      "engines": {
+        "node": ">= 0.6"
+      }
+    },
+    "node_modules/ms": {
+      "version": "2.0.0",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/ms/-/ms-2.0.0.tgz",
+      "integrity": "sha1-VgiurfwAvmwpAd9fmGF4jeDVl8g=",
+      "license": "MIT"
+    },
+    "node_modules/negotiator": {
+      "version": "0.6.3",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/negotiator/-/negotiator-0.6.3.tgz",
+      "integrity": "sha1-WOMjpy/twNb5zU0x/kn1FHlZDM0=",
+      "license": "MIT",
+      "engines": {
+        "node": ">= 0.6"
+      }
+    },
+    "node_modules/node-domexception": {
+      "version": "1.0.0",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/node-domexception/-/node-domexception-1.0.0.tgz",
+      "integrity": "sha1-aIjbRqH3HAt2s/dVUBa2P+ZHZuU=",
+      "funding": [
+        {
+          "type": "github",
+          "url": "https://github.com/sponsors/jimmywarting"
+        },
+        {
+          "type": "github",
+          "url": "https://paypal.me/jimmywarting"
+        }
+      ],
+      "license": "MIT",
+      "engines": {
+        "node": ">=10.5.0"
+      }
+    },
+    "node_modules/node-fetch": {
+      "version": "3.3.1",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/node-fetch/-/node-fetch-3.3.1.tgz",
+      "integrity": "sha1-s+6ntUs6SAIORvT4i5xadDDSCy4=",
+      "license": "MIT",
+      "dependencies": {
+        "data-uri-to-buffer": "^4.0.0",
+        "fetch-blob": "^3.1.4",
+        "formdata-polyfill": "^4.0.10"
+      },
+      "engines": {
+        "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
+      },
+      "funding": {
+        "type": "opencollective",
+        "url": "https://opencollective.com/node-fetch"
+      }
+    },
+    "node_modules/object-assign": {
+      "version": "4.1.1",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/object-assign/-/object-assign-4.1.1.tgz",
+      "integrity": "sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=",
+      "license": "MIT",
+      "engines": {
+        "node": ">=0.10.0"
+      }
+    },
+    "node_modules/object-inspect": {
+      "version": "1.12.3",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/object-inspect/-/object-inspect-1.12.3.tgz",
+      "integrity": "sha1-umLf/WfuJWyMCG365p4BbNHxmLk=",
+      "license": "MIT",
+      "funding": {
+        "url": "https://github.com/sponsors/ljharb"
+      }
+    },
+    "node_modules/on-finished": {
+      "version": "2.4.1",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/on-finished/-/on-finished-2.4.1.tgz",
+      "integrity": "sha1-WMjEQRblSEWtV/FKsQsDUzGErD8=",
+      "license": "MIT",
+      "dependencies": {
+        "ee-first": "1.1.1"
+      },
+      "engines": {
+        "node": ">= 0.8"
+      }
+    },
+    "node_modules/parseurl": {
+      "version": "1.3.3",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/parseurl/-/parseurl-1.3.3.tgz",
+      "integrity": "sha1-naGee+6NEt/wUT7Vt2lXeTvC6NQ=",
+      "license": "MIT",
+      "engines": {
+        "node": ">= 0.8"
+      }
+    },
+    "node_modules/path": {
+      "version": "0.12.7",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/path/-/path-0.12.7.tgz",
+      "integrity": "sha1-1NwqUGxM4hl+tIHr/NWzbAFAsQ8=",
+      "license": "MIT",
+      "dependencies": {
+        "process": "^0.11.1",
+        "util": "^0.10.3"
+      }
+    },
+    "node_modules/path-to-regexp": {
+      "version": "0.1.7",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/path-to-regexp/-/path-to-regexp-0.1.7.tgz",
+      "integrity": "sha1-32BBeABfUi8V60SQ5yR6G/qmf4w=",
+      "license": "MIT"
+    },
+    "node_modules/process": {
+      "version": "0.11.10",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/process/-/process-0.11.10.tgz",
+      "integrity": "sha1-czIwDoQBYb2j5podHZGn1LwW8YI=",
+      "license": "MIT",
+      "engines": {
+        "node": ">= 0.6.0"
+      }
+    },
+    "node_modules/proxy-addr": {
+      "version": "2.0.7",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/proxy-addr/-/proxy-addr-2.0.7.tgz",
+      "integrity": "sha1-8Z/mnOqzEe65S0LnDowgcPm6ECU=",
+      "license": "MIT",
+      "dependencies": {
+        "forwarded": "0.2.0",
+        "ipaddr.js": "1.9.1"
+      },
+      "engines": {
+        "node": ">= 0.10"
+      }
+    },
+    "node_modules/qs": {
+      "version": "6.11.0",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/qs/-/qs-6.11.0.tgz",
+      "integrity": "sha1-/Q2WNEb3pl4TZ+AavYVClFPww3o=",
+      "license": "BSD-3-Clause",
+      "dependencies": {
+        "side-channel": "^1.0.4"
+      },
+      "engines": {
+        "node": ">=0.6"
+      },
+      "funding": {
+        "url": "https://github.com/sponsors/ljharb"
+      }
+    },
+    "node_modules/range-parser": {
+      "version": "1.2.1",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/range-parser/-/range-parser-1.2.1.tgz",
+      "integrity": "sha1-PPNwI9GZ4cJNGlW4SADC8+ZGgDE=",
+      "license": "MIT",
+      "engines": {
+        "node": ">= 0.6"
+      }
+    },
+    "node_modules/raw-body": {
+      "version": "2.5.1",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/raw-body/-/raw-body-2.5.1.tgz",
+      "integrity": "sha1-/hsWKLGBtwAhXl/UI4n5i3E5KFc=",
+      "license": "MIT",
+      "dependencies": {
+        "bytes": "3.1.2",
+        "http-errors": "2.0.0",
+        "iconv-lite": "0.4.24",
+        "unpipe": "1.0.0"
+      },
+      "engines": {
+        "node": ">= 0.8"
+      }
+    },
+    "node_modules/safe-buffer": {
+      "version": "5.2.1",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/safe-buffer/-/safe-buffer-5.2.1.tgz",
+      "integrity": "sha1-Hq+fqb2x/dTsdfWPnNtOa3gn7sY=",
+      "funding": [
+        {
+          "type": "github",
+          "url": "https://github.com/sponsors/feross"
+        },
+        {
+          "type": "patreon",
+          "url": "https://www.patreon.com/feross"
+        },
+        {
+          "type": "consulting",
+          "url": "https://feross.org/support"
+        }
+      ],
+      "license": "MIT"
+    },
+    "node_modules/safer-buffer": {
+      "version": "2.1.2",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/safer-buffer/-/safer-buffer-2.1.2.tgz",
+      "integrity": "sha1-RPoWGwGHuVSd2Eu5GAL5vYOFzWo=",
+      "license": "MIT"
+    },
+    "node_modules/send": {
+      "version": "0.18.0",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/send/-/send-0.18.0.tgz",
+      "integrity": "sha1-ZwFnzGVLBfWqSnZ/kRO7NxvHBr4=",
+      "license": "MIT",
+      "dependencies": {
+        "debug": "2.6.9",
+        "depd": "2.0.0",
+        "destroy": "1.2.0",
+        "encodeurl": "~1.0.2",
+        "escape-html": "~1.0.3",
+        "etag": "~1.8.1",
+        "fresh": "0.5.2",
+        "http-errors": "2.0.0",
+        "mime": "1.6.0",
+        "ms": "2.1.3",
+        "on-finished": "2.4.1",
+        "range-parser": "~1.2.1",
+        "statuses": "2.0.1"
+      },
+      "engines": {
+        "node": ">= 0.8.0"
+      }
+    },
+    "node_modules/send/node_modules/ms": {
+      "version": "2.1.3",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/ms/-/ms-2.1.3.tgz",
+      "integrity": "sha1-V0yBOM4dK1hh8LRFedut1gxmFbI=",
+      "license": "MIT"
+    },
+    "node_modules/serve-static": {
+      "version": "1.15.0",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/serve-static/-/serve-static-1.15.0.tgz",
+      "integrity": "sha1-+q7wjP/goaYvYMrQxOUTz/CslUA=",
+      "license": "MIT",
+      "dependencies": {
+        "encodeurl": "~1.0.2",
+        "escape-html": "~1.0.3",
+        "parseurl": "~1.3.3",
+        "send": "0.18.0"
+      },
+      "engines": {
+        "node": ">= 0.8.0"
+      }
+    },
+    "node_modules/setprototypeof": {
+      "version": "1.2.0",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/setprototypeof/-/setprototypeof-1.2.0.tgz",
+      "integrity": "sha1-ZsmiSnP5/CjL5msJ/tPTPcrxtCQ=",
+      "license": "ISC"
+    },
+    "node_modules/side-channel": {
+      "version": "1.0.4",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/side-channel/-/side-channel-1.0.4.tgz",
+      "integrity": "sha1-785cj9wQTudRslxY1CkAEfpeos8=",
+      "license": "MIT",
+      "dependencies": {
+        "call-bind": "^1.0.0",
+        "get-intrinsic": "^1.0.2",
+        "object-inspect": "^1.9.0"
+      },
+      "funding": {
+        "url": "https://github.com/sponsors/ljharb"
+      }
+    },
+    "node_modules/statuses": {
+      "version": "2.0.1",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/statuses/-/statuses-2.0.1.tgz",
+      "integrity": "sha1-VcsADM8dSHKL0jxoWgY5mM8aG2M=",
+      "license": "MIT",
+      "engines": {
+        "node": ">= 0.8"
+      }
+    },
+    "node_modules/toidentifier": {
+      "version": "1.0.1",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/toidentifier/-/toidentifier-1.0.1.tgz",
+      "integrity": "sha1-O+NDIaiKgg7RvYDfqjPkefu43TU=",
+      "license": "MIT",
+      "engines": {
+        "node": ">=0.6"
+      }
+    },
+    "node_modules/type-is": {
+      "version": "1.6.18",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/type-is/-/type-is-1.6.18.tgz",
+      "integrity": "sha1-TlUs0F3wlGfcvE73Od6J8s83wTE=",
+      "license": "MIT",
+      "dependencies": {
+        "media-typer": "0.3.0",
+        "mime-types": "~2.1.24"
+      },
+      "engines": {
+        "node": ">= 0.6"
+      }
+    },
+    "node_modules/unpipe": {
+      "version": "1.0.0",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/unpipe/-/unpipe-1.0.0.tgz",
+      "integrity": "sha1-sr9O6FFKrmFltIF4KdIbLvSZBOw=",
+      "license": "MIT",
+      "engines": {
+        "node": ">= 0.8"
+      }
+    },
+    "node_modules/util": {
+      "version": "0.10.4",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/util/-/util-0.10.4.tgz",
+      "integrity": "sha1-OqASW/5mikZy3liFfTrOJ+y3aQE=",
+      "license": "MIT",
+      "dependencies": {
+        "inherits": "2.0.3"
+      }
+    },
+    "node_modules/util/node_modules/inherits": {
+      "version": "2.0.3",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/inherits/-/inherits-2.0.3.tgz",
+      "integrity": "sha1-Yzwsg+PaQqUC9SRmAiSA9CCCYd4=",
+      "license": "ISC"
+    },
+    "node_modules/utils-merge": {
+      "version": "1.0.1",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/utils-merge/-/utils-merge-1.0.1.tgz",
+      "integrity": "sha1-n5VxD1CiZ5R7LMwSR0HBAoQn5xM=",
+      "license": "MIT",
+      "engines": {
+        "node": ">= 0.4.0"
+      }
+    },
+    "node_modules/vary": {
+      "version": "1.1.2",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/vary/-/vary-1.1.2.tgz",
+      "integrity": "sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=",
+      "license": "MIT",
+      "engines": {
+        "node": ">= 0.8"
+      }
+    },
+    "node_modules/web-streams-polyfill": {
+      "version": "3.2.1",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/web-streams-polyfill/-/web-streams-polyfill-3.2.1.tgz",
+      "integrity": "sha1-ccJxjFK0X9Sdvu6IY0s6YM6rQqY=",
+      "license": "MIT",
+      "engines": {
+        "node": ">= 8"
+      }
+    }
+  },
+  "dependencies": {
+    "accepts": {
+      "version": "1.3.8",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/accepts/-/accepts-1.3.8.tgz",
+      "integrity": "sha1-C/C+EltnAUrcsLCSHmLbe//hay4=",
+      "requires": {
+        "mime-types": "~2.1.34",
+        "negotiator": "0.6.3"
+      }
+    },
+    "array-flatten": {
+      "version": "1.1.1",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/array-flatten/-/array-flatten-1.1.1.tgz",
+      "integrity": "sha1-ml9pkFGx5wczKPKgCJaLZOopVdI="
+    },
+    "body-parser": {
+      "version": "1.20.1",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/body-parser/-/body-parser-1.20.1.tgz",
+      "integrity": "sha1-sYEqiRLBlc03Gj7l5m+qIzilxmg=",
+      "requires": {
+        "bytes": "3.1.2",
+        "content-type": "~1.0.4",
+        "debug": "2.6.9",
+        "depd": "2.0.0",
+        "destroy": "1.2.0",
+        "http-errors": "2.0.0",
+        "iconv-lite": "0.4.24",
+        "on-finished": "2.4.1",
+        "qs": "6.11.0",
+        "raw-body": "2.5.1",
+        "type-is": "~1.6.18",
+        "unpipe": "1.0.0"
+      }
+    },
+    "bytes": {
+      "version": "3.1.2",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/bytes/-/bytes-3.1.2.tgz",
+      "integrity": "sha1-iwvuuYYFrfGxKPpDhkA8AJ4CIaU="
+    },
+    "call-bind": {
+      "version": "1.0.2",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/call-bind/-/call-bind-1.0.2.tgz",
+      "integrity": "sha1-sdTonmiBGcPJqQOtMKuy9qkZvjw=",
+      "requires": {
+        "function-bind": "^1.1.1",
+        "get-intrinsic": "^1.0.2"
+      }
+    },
+    "content-disposition": {
+      "version": "0.5.4",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/content-disposition/-/content-disposition-0.5.4.tgz",
+      "integrity": "sha1-i4K076yCUSoCuwsdzsnSxejrW/4=",
+      "requires": {
+        "safe-buffer": "5.2.1"
+      }
+    },
+    "content-type": {
+      "version": "1.0.5",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/content-type/-/content-type-1.0.5.tgz",
+      "integrity": "sha1-i3cxYmVtHRCGeEyPI6VM5tc9eRg="
+    },
+    "cookie": {
+      "version": "0.5.0",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/cookie/-/cookie-0.5.0.tgz",
+      "integrity": "sha1-0fXXGt7GVYxY84mYfDZqpH6ZT4s="
+    },
+    "cookie-signature": {
+      "version": "1.0.6",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/cookie-signature/-/cookie-signature-1.0.6.tgz",
+      "integrity": "sha1-4wOogrNCzD7oylE6eZmXNNqzriw="
+    },
+    "cors": {
+      "version": "2.8.5",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/cors/-/cors-2.8.5.tgz",
+      "integrity": "sha1-6sEdpRWS3Ya58G9uesKTs9+HXSk=",
+      "requires": {
+        "object-assign": "^4",
+        "vary": "^1"
+      }
+    },
+    "data-uri-to-buffer": {
+      "version": "4.0.1",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/data-uri-to-buffer/-/data-uri-to-buffer-4.0.1.tgz",
+      "integrity": "sha1-2P6ysogeak9YwuCKz9Dig04mIi4="
+    },
+    "debug": {
+      "version": "2.6.9",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/debug/-/debug-2.6.9.tgz",
+      "integrity": "sha1-XRKFFd8TT/Mn6QpMk/Tgd6U2NB8=",
+      "requires": {
+        "ms": "2.0.0"
+      }
+    },
+    "depd": {
+      "version": "2.0.0",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/depd/-/depd-2.0.0.tgz",
+      "integrity": "sha1-tpYWPMdXVg0JzyLMj60Vcbeedt8="
+    },
+    "destroy": {
+      "version": "1.2.0",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/destroy/-/destroy-1.2.0.tgz",
+      "integrity": "sha1-SANzVQmti+VSk0xn32FPlOZvoBU="
+    },
+    "dotenv": {
+      "version": "16.0.3",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/dotenv/-/dotenv-16.0.3.tgz",
+      "integrity": "sha1-EVrsQrrFBT2zxFbbMMwkOlqDagc="
+    },
+    "ee-first": {
+      "version": "1.1.1",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/ee-first/-/ee-first-1.1.1.tgz",
+      "integrity": "sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0="
+    },
+    "encodeurl": {
+      "version": "1.0.2",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/encodeurl/-/encodeurl-1.0.2.tgz",
+      "integrity": "sha1-rT/0yG7C0CkyL1oCw6mmBslbP1k="
+    },
+    "escape-html": {
+      "version": "1.0.3",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/escape-html/-/escape-html-1.0.3.tgz",
+      "integrity": "sha1-Aljq5NPQwJdN4cFpGI7wBR0dGYg="
+    },
+    "etag": {
+      "version": "1.8.1",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/etag/-/etag-1.8.1.tgz",
+      "integrity": "sha1-Qa4u62XvpiJorr/qg6x9eSmbCIc="
+    },
+    "express": {
+      "version": "4.18.2",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/express/-/express-4.18.2.tgz",
+      "integrity": "sha1-P6vggpbpMMeWwZ48UWl5OGup/Vk=",
+      "requires": {
+        "accepts": "~1.3.8",
+        "array-flatten": "1.1.1",
+        "body-parser": "1.20.1",
+        "content-disposition": "0.5.4",
+        "content-type": "~1.0.4",
+        "cookie": "0.5.0",
+        "cookie-signature": "1.0.6",
+        "debug": "2.6.9",
+        "depd": "2.0.0",
+        "encodeurl": "~1.0.2",
+        "escape-html": "~1.0.3",
+        "etag": "~1.8.1",
+        "finalhandler": "1.2.0",
+        "fresh": "0.5.2",
+        "http-errors": "2.0.0",
+        "merge-descriptors": "1.0.1",
+        "methods": "~1.1.2",
+        "on-finished": "2.4.1",
+        "parseurl": "~1.3.3",
+        "path-to-regexp": "0.1.7",
+        "proxy-addr": "~2.0.7",
+        "qs": "6.11.0",
+        "range-parser": "~1.2.1",
+        "safe-buffer": "5.2.1",
+        "send": "0.18.0",
+        "serve-static": "1.15.0",
+        "setprototypeof": "1.2.0",
+        "statuses": "2.0.1",
+        "type-is": "~1.6.18",
+        "utils-merge": "1.0.1",
+        "vary": "~1.1.2"
+      }
+    },
+    "fetch-blob": {
+      "version": "3.2.0",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/fetch-blob/-/fetch-blob-3.2.0.tgz",
+      "integrity": "sha1-8JuNS71Frcbwwgt+eH55PjCdzOk=",
+      "requires": {
+        "node-domexception": "^1.0.0",
+        "web-streams-polyfill": "^3.0.3"
+      }
+    },
+    "finalhandler": {
+      "version": "1.2.0",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/finalhandler/-/finalhandler-1.2.0.tgz",
+      "integrity": "sha1-fSP+VzGyB7RkDk/NAK7B+SB6ezI=",
+      "requires": {
+        "debug": "2.6.9",
+        "encodeurl": "~1.0.2",
+        "escape-html": "~1.0.3",
+        "on-finished": "2.4.1",
+        "parseurl": "~1.3.3",
+        "statuses": "2.0.1",
+        "unpipe": "~1.0.0"
+      }
+    },
+    "formdata-polyfill": {
+      "version": "4.0.10",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/formdata-polyfill/-/formdata-polyfill-4.0.10.tgz",
+      "integrity": "sha1-JIB8McnUAuACqz2McgFEzriEhCM=",
+      "requires": {
+        "fetch-blob": "^3.1.2"
+      }
+    },
+    "forwarded": {
+      "version": "0.2.0",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/forwarded/-/forwarded-0.2.0.tgz",
+      "integrity": "sha1-ImmTZCiq1MFcfr6XeahL8LKoGBE="
+    },
+    "fresh": {
+      "version": "0.5.2",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/fresh/-/fresh-0.5.2.tgz",
+      "integrity": "sha1-PYyt2Q2XZWn6g1qx+OSyOhBWBac="
+    },
+    "function-bind": {
+      "version": "1.1.1",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/function-bind/-/function-bind-1.1.1.tgz",
+      "integrity": "sha1-pWiZ0+o8m6uHS7l3O3xe3pL0iV0="
+    },
+    "get-intrinsic": {
+      "version": "1.2.1",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/get-intrinsic/-/get-intrinsic-1.2.1.tgz",
+      "integrity": "sha1-0pVkT+1FBfyc3pUsN+4StHeoPYI=",
+      "requires": {
+        "function-bind": "^1.1.1",
+        "has": "^1.0.3",
+        "has-proto": "^1.0.1",
+        "has-symbols": "^1.0.3"
+      }
+    },
+    "has": {
+      "version": "1.0.3",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/has/-/has-1.0.3.tgz",
+      "integrity": "sha1-ci18v8H2qoJB8W3YFOAR4fQeh5Y=",
+      "requires": {
+        "function-bind": "^1.1.1"
+      }
+    },
+    "has-proto": {
+      "version": "1.0.1",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/has-proto/-/has-proto-1.0.1.tgz",
+      "integrity": "sha1-GIXBMFU4lYr/Rp/vN5N8InlUCOA="
+    },
+    "has-symbols": {
+      "version": "1.0.3",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/has-symbols/-/has-symbols-1.0.3.tgz",
+      "integrity": "sha1-u3ssQ0klHc6HsSX3vfh0qnyLOfg="
+    },
+    "http-errors": {
+      "version": "2.0.0",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/http-errors/-/http-errors-2.0.0.tgz",
+      "integrity": "sha1-t3dKFIbvc892Z6ya4IWMASxXudM=",
+      "requires": {
+        "depd": "2.0.0",
+        "inherits": "2.0.4",
+        "setprototypeof": "1.2.0",
+        "statuses": "2.0.1",
+        "toidentifier": "1.0.1"
+      }
+    },
+    "iconv-lite": {
+      "version": "0.4.24",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/iconv-lite/-/iconv-lite-0.4.24.tgz",
+      "integrity": "sha1-ICK0sl+93CHS9SSXSkdKr+czkIs=",
+      "requires": {
+        "safer-buffer": ">= 2.1.2 < 3"
+      }
+    },
+    "inherits": {
+      "version": "2.0.4",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/inherits/-/inherits-2.0.4.tgz",
+      "integrity": "sha1-D6LGT5MpF8NDOg3tVTY6rjdBa3w="
+    },
+    "ipaddr.js": {
+      "version": "1.9.1",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/ipaddr.js/-/ipaddr.js-1.9.1.tgz",
+      "integrity": "sha1-v/OFQ+64mEglB5/zoqjmy9RngbM="
+    },
+    "media-typer": {
+      "version": "0.3.0",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/media-typer/-/media-typer-0.3.0.tgz",
+      "integrity": "sha1-hxDXrwqmJvj/+hzgAWhUUmMlV0g="
+    },
+    "merge-descriptors": {
+      "version": "1.0.1",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/merge-descriptors/-/merge-descriptors-1.0.1.tgz",
+      "integrity": "sha1-sAqqVW3YtEVoFQ7J0blT8/kMu2E="
+    },
+    "methods": {
+      "version": "1.1.2",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/methods/-/methods-1.1.2.tgz",
+      "integrity": "sha1-VSmk1nZUE07cxSZmVoNbD4Ua/O4="
+    },
+    "mime": {
+      "version": "1.6.0",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/mime/-/mime-1.6.0.tgz",
+      "integrity": "sha1-Ms2eXGRVO9WNGaVor0Uqz/BJgbE="
+    },
+    "mime-db": {
+      "version": "1.52.0",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/mime-db/-/mime-db-1.52.0.tgz",
+      "integrity": "sha1-u6vNwChZ9JhzAchW4zh85exDv3A="
+    },
+    "mime-types": {
+      "version": "2.1.35",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/mime-types/-/mime-types-2.1.35.tgz",
+      "integrity": "sha1-OBqHG2KnNEUGYK497uRIE/cNlZo=",
+      "requires": {
+        "mime-db": "1.52.0"
+      }
+    },
+    "ms": {
+      "version": "2.0.0",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/ms/-/ms-2.0.0.tgz",
+      "integrity": "sha1-VgiurfwAvmwpAd9fmGF4jeDVl8g="
+    },
+    "negotiator": {
+      "version": "0.6.3",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/negotiator/-/negotiator-0.6.3.tgz",
+      "integrity": "sha1-WOMjpy/twNb5zU0x/kn1FHlZDM0="
+    },
+    "node-domexception": {
+      "version": "1.0.0",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/node-domexception/-/node-domexception-1.0.0.tgz",
+      "integrity": "sha1-aIjbRqH3HAt2s/dVUBa2P+ZHZuU="
+    },
+    "node-fetch": {
+      "version": "3.3.1",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/node-fetch/-/node-fetch-3.3.1.tgz",
+      "integrity": "sha1-s+6ntUs6SAIORvT4i5xadDDSCy4=",
+      "requires": {
+        "data-uri-to-buffer": "^4.0.0",
+        "fetch-blob": "^3.1.4",
+        "formdata-polyfill": "^4.0.10"
+      }
+    },
+    "object-assign": {
+      "version": "4.1.1",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/object-assign/-/object-assign-4.1.1.tgz",
+      "integrity": "sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM="
+    },
+    "object-inspect": {
+      "version": "1.12.3",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/object-inspect/-/object-inspect-1.12.3.tgz",
+      "integrity": "sha1-umLf/WfuJWyMCG365p4BbNHxmLk="
+    },
+    "on-finished": {
+      "version": "2.4.1",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/on-finished/-/on-finished-2.4.1.tgz",
+      "integrity": "sha1-WMjEQRblSEWtV/FKsQsDUzGErD8=",
+      "requires": {
+        "ee-first": "1.1.1"
+      }
+    },
+    "parseurl": {
+      "version": "1.3.3",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/parseurl/-/parseurl-1.3.3.tgz",
+      "integrity": "sha1-naGee+6NEt/wUT7Vt2lXeTvC6NQ="
+    },
+    "path": {
+      "version": "0.12.7",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/path/-/path-0.12.7.tgz",
+      "integrity": "sha1-1NwqUGxM4hl+tIHr/NWzbAFAsQ8=",
+      "requires": {
+        "process": "^0.11.1",
+        "util": "^0.10.3"
+      }
+    },
+    "path-to-regexp": {
+      "version": "0.1.7",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/path-to-regexp/-/path-to-regexp-0.1.7.tgz",
+      "integrity": "sha1-32BBeABfUi8V60SQ5yR6G/qmf4w="
+    },
+    "process": {
+      "version": "0.11.10",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/process/-/process-0.11.10.tgz",
+      "integrity": "sha1-czIwDoQBYb2j5podHZGn1LwW8YI="
+    },
+    "proxy-addr": {
+      "version": "2.0.7",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/proxy-addr/-/proxy-addr-2.0.7.tgz",
+      "integrity": "sha1-8Z/mnOqzEe65S0LnDowgcPm6ECU=",
+      "requires": {
+        "forwarded": "0.2.0",
+        "ipaddr.js": "1.9.1"
+      }
+    },
+    "qs": {
+      "version": "6.11.0",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/qs/-/qs-6.11.0.tgz",
+      "integrity": "sha1-/Q2WNEb3pl4TZ+AavYVClFPww3o=",
+      "requires": {
+        "side-channel": "^1.0.4"
+      }
+    },
+    "range-parser": {
+      "version": "1.2.1",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/range-parser/-/range-parser-1.2.1.tgz",
+      "integrity": "sha1-PPNwI9GZ4cJNGlW4SADC8+ZGgDE="
+    },
+    "raw-body": {
+      "version": "2.5.1",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/raw-body/-/raw-body-2.5.1.tgz",
+      "integrity": "sha1-/hsWKLGBtwAhXl/UI4n5i3E5KFc=",
+      "requires": {
+        "bytes": "3.1.2",
+        "http-errors": "2.0.0",
+        "iconv-lite": "0.4.24",
+        "unpipe": "1.0.0"
+      }
+    },
+    "safe-buffer": {
+      "version": "5.2.1",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/safe-buffer/-/safe-buffer-5.2.1.tgz",
+      "integrity": "sha1-Hq+fqb2x/dTsdfWPnNtOa3gn7sY="
+    },
+    "safer-buffer": {
+      "version": "2.1.2",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/safer-buffer/-/safer-buffer-2.1.2.tgz",
+      "integrity": "sha1-RPoWGwGHuVSd2Eu5GAL5vYOFzWo="
+    },
+    "send": {
+      "version": "0.18.0",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/send/-/send-0.18.0.tgz",
+      "integrity": "sha1-ZwFnzGVLBfWqSnZ/kRO7NxvHBr4=",
+      "requires": {
+        "debug": "2.6.9",
+        "depd": "2.0.0",
+        "destroy": "1.2.0",
+        "encodeurl": "~1.0.2",
+        "escape-html": "~1.0.3",
+        "etag": "~1.8.1",
+        "fresh": "0.5.2",
+        "http-errors": "2.0.0",
+        "mime": "1.6.0",
+        "ms": "2.1.3",
+        "on-finished": "2.4.1",
+        "range-parser": "~1.2.1",
+        "statuses": "2.0.1"
+      },
+      "dependencies": {
+        "ms": {
+          "version": "2.1.3",
+          "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/ms/-/ms-2.1.3.tgz",
+          "integrity": "sha1-V0yBOM4dK1hh8LRFedut1gxmFbI="
+        }
+      }
+    },
+    "serve-static": {
+      "version": "1.15.0",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/serve-static/-/serve-static-1.15.0.tgz",
+      "integrity": "sha1-+q7wjP/goaYvYMrQxOUTz/CslUA=",
+      "requires": {
+        "encodeurl": "~1.0.2",
+        "escape-html": "~1.0.3",
+        "parseurl": "~1.3.3",
+        "send": "0.18.0"
+      }
+    },
+    "setprototypeof": {
+      "version": "1.2.0",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/setprototypeof/-/setprototypeof-1.2.0.tgz",
+      "integrity": "sha1-ZsmiSnP5/CjL5msJ/tPTPcrxtCQ="
+    },
+    "side-channel": {
+      "version": "1.0.4",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/side-channel/-/side-channel-1.0.4.tgz",
+      "integrity": "sha1-785cj9wQTudRslxY1CkAEfpeos8=",
+      "requires": {
+        "call-bind": "^1.0.0",
+        "get-intrinsic": "^1.0.2",
+        "object-inspect": "^1.9.0"
+      }
+    },
+    "statuses": {
+      "version": "2.0.1",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/statuses/-/statuses-2.0.1.tgz",
+      "integrity": "sha1-VcsADM8dSHKL0jxoWgY5mM8aG2M="
+    },
+    "toidentifier": {
+      "version": "1.0.1",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/toidentifier/-/toidentifier-1.0.1.tgz",
+      "integrity": "sha1-O+NDIaiKgg7RvYDfqjPkefu43TU="
+    },
+    "type-is": {
+      "version": "1.6.18",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/type-is/-/type-is-1.6.18.tgz",
+      "integrity": "sha1-TlUs0F3wlGfcvE73Od6J8s83wTE=",
+      "requires": {
+        "media-typer": "0.3.0",
+        "mime-types": "~2.1.24"
+      }
+    },
+    "unpipe": {
+      "version": "1.0.0",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/unpipe/-/unpipe-1.0.0.tgz",
+      "integrity": "sha1-sr9O6FFKrmFltIF4KdIbLvSZBOw="
+    },
+    "util": {
+      "version": "0.10.4",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/util/-/util-0.10.4.tgz",
+      "integrity": "sha1-OqASW/5mikZy3liFfTrOJ+y3aQE=",
+      "requires": {
+        "inherits": "2.0.3"
+      },
+      "dependencies": {
+        "inherits": {
+          "version": "2.0.3",
+          "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/inherits/-/inherits-2.0.3.tgz",
+          "integrity": "sha1-Yzwsg+PaQqUC9SRmAiSA9CCCYd4="
+        }
+      }
+    },
+    "utils-merge": {
+      "version": "1.0.1",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/utils-merge/-/utils-merge-1.0.1.tgz",
+      "integrity": "sha1-n5VxD1CiZ5R7LMwSR0HBAoQn5xM="
+    },
+    "vary": {
+      "version": "1.1.2",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/vary/-/vary-1.1.2.tgz",
+      "integrity": "sha1-IpnwLG3tMNSllhsLn3RSShj2NPw="
+    },
+    "web-streams-polyfill": {
+      "version": "3.2.1",
+      "resolved": "https://artifactory.g.devqa.gcp.dev.paypalinc.com/artifactory/api/npm/npm-all/web-streams-polyfill/-/web-streams-polyfill-3.2.1.tgz",
+      "integrity": "sha1-ccJxjFK0X9Sdvu6IY0s6YM6rQqY="
+    }
+  }
+}
