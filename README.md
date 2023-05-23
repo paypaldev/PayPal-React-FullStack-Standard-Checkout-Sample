@@ -34,8 +34,6 @@ This sample app shows you how to integrate PayPal into your React app for the [s
 - Run `npm install` in your terminal
 - Run `npm start` in your terminal
 
-> Make sure you have entered in the index.html your CLIEN_ID key.
-
 ## PayPal Developer Community
 The PayPal Developer community helps you build your career while improving your products and the developer experience. You’ll be able to contribute code and documentation, meet new people and learn from the open-source community.
  
