@@ -7,15 +7,15 @@ function App() {
       FUNDING.VENMO,
       FUNDING.CARD
   ];
-
-  FUNDING_SOURCES.map(fundingSource=>{
-
-    return fundingSource;
-  });
+  
+  const initialOptions = {
+    "client-id": process.env.REACT_APP_CLIENT_ID,
+    "enable-funding": "paylater,venmo",
+  }
 
   return (
     <div className="App">
-        <PayPalScriptProvider options={{ "client-id": process.env.REACT_APP_CLIENT_ID }}>
+        <PayPalScriptProvider options={initialOptions}>
         {
           FUNDING_SOURCES.map(fundingSource=>{
             return(
@@ -42,7 +42,6 @@ function App() {
                 }}
                   
                 onApprove={async (data, actions) => {
-                  console.log("data.orderID", data.orderID)
                   try {
                     const response = await fetch(`http://localhost:9597/orders/${data.orderID}/capture`, {
                       method: "POST"
