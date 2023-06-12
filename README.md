@@ -22,6 +22,8 @@ This sample app shows you how to integrate PayPal into your React app for the [s
 
 ## Run this project
 
+You can clone this repo and follow the instructions below or run in on [Stackblitz](https://stackblitz.com/edit/stackblitz-webcontainer-api-starter-nvw8fy?file=README.md) and follow the instructions below.
+
 ### Config Frontend
 - Inside of the `.env` file, enter your PayPal client ID for the `REACT_APP_CLIENT_ID` enviroment variable.
 - Run `npm install` in your terminal
