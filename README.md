@@ -18,9 +18,11 @@
 </div>
 
 # PayPal React (NodeJS) FullStack Standard Checkout
-This sample app shows you how to integrate PayPal into your React app for the [standard checkout(https://developer.paypal.com/docs/checkout/standard/integrate/) workflow.
+This sample app shows you how to integrate PayPal into your React app for the [standard checkout](https://developer.paypal.com/docs/checkout/standard/integrate/) workflow.
 
 ## Run this project
+
+You can run this project locally by cloning this repo or open the project on Stackblitz.
 
 ### Config Frontend
 - Inside of the `.env` file, enter your PayPal client ID for the `REACT_APP_CLIENT_ID` enviroment variable.
