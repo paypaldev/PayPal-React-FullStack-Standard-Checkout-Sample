@@ -22,17 +22,29 @@ This sample app shows you how to integrate PayPal into your React app for the [s
 
 ## Run this project
 
-### Frontend
+### Config Frontend
 - Inside of the `.env` file, enter your PayPal client ID for the `REACT_APP_CLIENT_ID` enviroment variable.
 - Run `npm install` in your terminal
-- Run `npm start` in your terminal
-- Navigate in your browswer to `http://localhost:3000/`
 
-### Backend
+### Config Backend
 
 - Inside of the `.env` file, enter your PayPal client ID for the `CLIENT_ID` and `APP_SECRET` enviroment variables.
-- Run `npm install` in your terminal
-- Run `npm start` in your terminal
+- Run `npm install` in your terminal inside the backend folder
+
+### Run app
+
+In the root folder, run `npm start` in your terminal. This will run the backend and frontend at the same time.
+- Navigate in your browswer to `http://localhost:3000/`
+
+### Sample Card
+
+Card Type: `Visa`
+
+Card Number: `5458406954745076`
+
+Expiration Date: `01/2025`
+
+CVV: `123`
 
 ## PayPal Developer Community
 The PayPal Developer community helps you build your career while improving your products and the developer experience. You’ll be able to contribute code and documentation, meet new people and learn from the open-source community.

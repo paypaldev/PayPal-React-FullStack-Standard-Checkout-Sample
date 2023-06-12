@@ -1,3 +1,4 @@
+import React from 'react';
 import { PayPalScriptProvider, PayPalButtons, FUNDING } from "@paypal/react-paypal-js";
 
 function App() {
@@ -72,7 +73,7 @@ function App() {
                     // Successful capture! For demo purposes:
                     console.log('Capture result', details, JSON.stringify(details, null, 2));
                     const transaction = details.purchase_units[0].payments.captures[0];
-                    alert('Transaction '+ transaction.status + ': ' + transaction.id + 'See console for all available details');
+                    alert('Transaction '+ transaction.status + ': ' + transaction.id + '. See console for all available details');
                   } catch (error) {
                     console.error(error);
                     // Handle the error or display an appropriate error message to the user
