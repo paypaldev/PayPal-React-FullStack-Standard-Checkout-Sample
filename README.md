@@ -25,18 +25,23 @@ This sample app shows you how to integrate PayPal into your React app for the [s
 You can clone this repo and follow the instructions below or run it on [Stackblitz](https://stackblitz.com/edit/stackblitz-webcontainer-api-starter-nvw8fy?file=README.md) and follow the instructions below.
 
 ### Config Frontend
-- Inside of the `.env` file, enter your PayPal client ID for the `REACT_APP_CLIENT_ID` enviroment variable.
-- Run `npm install` in your terminal
+- Rename the `.env.example` file to `.env`.
+- Inside of the .env file, enter your PayPal client ID for the `REACT_APP_CLIENT_ID` enviroment variable.
+- Run npm install in your terminal
+- Run npm start in your terminal  (this will run the server separetly from the backend)
 
 ### Config Backend
 
-- Inside of the `.env` file, enter your PayPal client ID for the `CLIENT_ID` and `APP_SECRET` enviroment variables.
-- Run `npm install` in your terminal inside the backend folder
+- Rename the `.env.example` file to .env.
+- Inside of the `.env` file, enter your PayPal client ID for the `PAYPAL_CLIENT_ID` and your PayPal app secret for the `PAYPAL_APP_SECRET`  enviroment variables.
+- Run npm install in your terminal
+- Run npm start in your terminal (this will run the server separetly from the frontend)
 
 ### Run app
 
 In the root folder, run `npm start` in your terminal. This will run the backend and frontend at the same time.
 - Navigate in your browswer to `http://localhost:3000/`
+- I'm able to have my frontend and backend server similute they are in the same server port by adding `"proxy": "http://localhost:9597"` to my frontend `package.json`.
 
 ### Sample Card
 
