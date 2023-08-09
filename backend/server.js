@@ -12,9 +12,11 @@ app.use(express.json());
 const generateAccessToken = async () => {
   try {
     if (!PAYPAL_CLIENT_ID || !PAYPAL_APP_SECRET) {
-      throw new Error("MISSING_API_CREDENTIALS");
+      throw new Error('MISSING_API_CREDENTIALS');
     }
-    const auth = Buffer.from(PAYPAL_CLIENT_ID + ':' + PAYPAL_APP_SECRET).toString('base64');
+    const auth = Buffer.from(
+      PAYPAL_CLIENT_ID + ':' + PAYPAL_APP_SECRET,
+    ).toString('base64');
     const response = await fetch(`${base}/v1/oauth2/token`, {
       method: 'post',
       body: 'grant_type=client_credentials',
@@ -32,7 +34,10 @@ const generateAccessToken = async () => {
 
 const createOrder = async (cart) => {
   // use the cart information passed from the front-end to calculate the purchase unit details
-  console.log('shopping cart information passed from the frontend createOrder() callback:', cart);
+  console.log(
+    'shopping cart information passed from the frontend createOrder() callback:',
+    cart,
+  );
 
   const accessToken = await generateAccessToken();
   const url = `${base}/v2/checkout/orders`;
