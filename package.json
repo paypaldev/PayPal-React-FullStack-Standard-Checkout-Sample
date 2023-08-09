@@ -20,7 +20,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "start": "concurrently \"npm run front\" \"npm run back\""
+    "start": "concurrently \"npm run front\" \"npm run back\"",
+    "format": "npx prettier \"**/*.jsx\" --write --single-quote"
   },
   "eslintConfig": {
     "extends": [
