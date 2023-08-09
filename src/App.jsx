@@ -1,5 +1,5 @@
 import React from 'react';
-import { PayPalScriptProvider, PayPalButtons, FUNDING } from "@paypal/react-paypal-js";
+import { PayPalScriptProvider, PayPalButtons, FUNDING } from '@paypal/react-paypal-js';
 
 function App() {
   const FUNDING_SOURCES = [
@@ -10,12 +10,12 @@ function App() {
   ];
   
   const initialOptions = {
-    "client-id": process.env.REACT_APP_CLIENT_ID,
-    "enable-funding": "paylater,venmo",
+    'client-id': 'YOUR_PAYPAL_CLIENT_ID',
+    'enable-funding': 'paylater,venmo',
   }
 
   return (
-    <div className="App">
+    <div className='App'>
         <PayPalScriptProvider options={initialOptions}>
         {
           FUNDING_SOURCES.map(fundingSource=>{
@@ -24,15 +24,15 @@ function App() {
                   fundingSource={fundingSource}
                   key={fundingSource}
                   style={{
-                    layout: 'vertical',// or horizontal
                     shape: 'rect',
                     color: (fundingSource === FUNDING.PAYLATER) ? 'gold' : '',
                   }}
-                  createOrder={async (data, actions) => {
+                  createOrder={async () => {
                     try {
-                      const response = await fetch("/api/orders", {
-                        method: "POST",
-                        // use the "body" param to optionally pass additional order information
+                      const response = await fetch('/api/orders', {
+                        method: 'POST',
+                        'Content-Type': 'application/json',
+                        // use the 'body' param to optionally pass additional order information
                         // like product ids and quantities
                         body: JSON.stringify({
                           cart: [{
@@ -53,7 +53,7 @@ function App() {
                   onApprove={async (data, actions) => {
                     try {
                       const response = await fetch(`/api/orders/${data.orderID}/capture`, {
-                        method: "POST",
+                        method: 'POST',
                         headers: {
                           'Content-Type': 'application/json',
                         },

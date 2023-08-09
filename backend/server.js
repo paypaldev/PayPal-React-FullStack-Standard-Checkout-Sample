@@ -1,7 +1,6 @@
 import express from 'express';
 import fetch from 'node-fetch';
 import 'dotenv/config';
-import path from 'path';
 
 const { PAYPAL_CLIENT_ID, PAYPAL_APP_SECRET } = process.env;
 const base = 'https://api-m.sandbox.paypal.com';
@@ -106,11 +105,6 @@ app.post('/api/orders/:orderID/capture', async (req, res) => {
     console.error('Failed to create order:', error);
     res.status(500).json({ error: 'Failed to capture order.' });
   }
-});
-
-//Serve index.html
-app.get('/', (req, res) => {
-  res.sendFile(path.resolve('./index.html'));
 });
 
 app.listen(9597, () => {
