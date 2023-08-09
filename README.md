@@ -26,7 +26,7 @@ You can clone this repo and follow the instructions below or run it on [Stackbli
 
 ### Config Frontend
 - Rename the `.env.example` file to `.env`.
-- Inside of the .env file, enter your PayPal client ID for the `REACT_APP_CLIENT_ID` enviroment variable.
+- Inside of `the App.jsx` file, enter your PayPal `client-id` inside the `initialOptions` object.
 - Run npm install in your terminal
 - Run npm start in your terminal  (this will run the server separetly from the backend)
 
