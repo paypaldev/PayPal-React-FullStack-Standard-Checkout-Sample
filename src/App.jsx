@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { PayPalScriptProvider, PayPalButtons } from '@paypal/react-paypal-js';
+
+// Renders errors or successfull transactions on the screen.
+function Message({ content }) {
+  return <p>{content}</p>;
+}
 
 function App() {
   const initialOptions = {
-    'client-id':
-      'ATcbsWeJib7eBUta2p5NaO64gvVFwIjJV2vEBu9wfP_ALWWiUtlxuo0OHxeCBsv807oldJyihRjS5AzR',
+    'client-id': 'PAYPAL_CLIENT_ID',
     'enable-funding': 'paylater,venmo',
+    'data-sdk-integration-source': 'integrationbuilder_ac',
   };
+
+  const [message, setMessage] = useState('');
 
   return (
     <div className="App">
@@ -14,7 +21,8 @@ function App() {
         <PayPalButtons
           style={{
             shape: 'rect',
-            // color: fundingSource === FUNDING.PAYLATER ? 'gold' : '',
+            //color:'blue' change the default color of the buttons
+            layout: 'vertical', //default value. Can be changed to horizontal
           }}
           createOrder={async () => {
             try {
@@ -74,7 +82,7 @@ function App() {
                   ? ' ' + errorDetail.description
                   : '';
                 msg += details.debug_id ? ' (' + details.debug_id + ')' : '';
-                alert(msg);
+                setMessage(msg);
               }
 
               // Successful capture! For demo purposes:
@@ -85,19 +93,20 @@ function App() {
               );
               const transaction =
                 details.purchase_units[0].payments.captures[0];
-              alert(
+              let msg =
                 'Transaction ' +
-                  transaction.status +
-                  ': ' +
-                  transaction.id +
-                  '. See console for all available details',
-              );
+                transaction.status +
+                ': ' +
+                transaction.id +
+                '. See console for all available details';
+              setMessage(msg);
             } catch (error) {
               console.error(error);
               // Handle the error or display an appropriate error message to the user
             }
           }}
         />
+        <Message content={message} />
       </PayPalScriptProvider>
     </div>
   );
