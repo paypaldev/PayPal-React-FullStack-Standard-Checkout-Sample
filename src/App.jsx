@@ -106,8 +106,8 @@ function App() {
             }
           }}
         />
-        <Message content={message} />
       </PayPalScriptProvider>
+      <Message content={message} />
     </div>
   );
 }
