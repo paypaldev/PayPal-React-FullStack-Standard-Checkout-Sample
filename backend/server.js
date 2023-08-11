@@ -2,23 +2,27 @@ import express from 'express';
 import fetch from 'node-fetch';
 import 'dotenv/config';
 
-const { PAYPAL_CLIENT_ID, PAYPAL_APP_SECRET } = process.env;
+const { PAYPAL_CLIENT_ID, PAYPAL_CLIENT_SECRET } = process.env;
 const base = 'https://api-m.sandbox.paypal.com';
 const app = express();
 
 // parse post params sent in body in json format
 app.use(express.json());
 
+/**
+ * Generate an OAuth 2.0 access token for authenticating with PayPal REST APIs.
+ * @see https://developer.paypal.com/api/rest/authentication/
+ */
 const generateAccessToken = async () => {
   try {
-    if (!PAYPAL_CLIENT_ID || !PAYPAL_APP_SECRET) {
+    if (!PAYPAL_CLIENT_ID || !PAYPAL_CLIENT_SECRET) {
       throw new Error('MISSING_API_CREDENTIALS');
     }
     const auth = Buffer.from(
-      PAYPAL_CLIENT_ID + ':' + PAYPAL_APP_SECRET,
+      PAYPAL_CLIENT_ID + ':' + PAYPAL_CLIENT_SECRET,
     ).toString('base64');
     const response = await fetch(`${base}/v1/oauth2/token`, {
-      method: 'post',
+      method: 'POST',
       body: 'grant_type=client_credentials',
       headers: {
         Authorization: `Basic ${auth}`,
@@ -32,6 +36,10 @@ const generateAccessToken = async () => {
   }
 };
 
+/**
+ * Create an order to start the transaction.
+ * @see https://developer.paypal.com/docs/api/orders/v2/#orders_create
+ */
 const createOrder = async (cart) => {
   // use the cart information passed from the front-end to calculate the purchase unit details
   console.log(
@@ -65,12 +73,16 @@ const createOrder = async (cart) => {
   return handleResponse(response);
 };
 
+/**
+ * Capture payment for the created order to complete the transaction.
+ * @see https://developer.paypal.com/docs/api/orders/v2/#orders_capture
+ */
 const captureOrder = async (orderID) => {
   const accessToken = await generateAccessToken();
   const url = `${base}/v2/checkout/orders/${orderID}/capture`;
 
   const response = await fetch(url, {
-    method: 'post',
+    method: 'POST',
     headers: {
       'Content-Type': 'application/json',
       Authorization: `Bearer ${accessToken}`,

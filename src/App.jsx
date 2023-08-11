@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { PayPalScriptProvider, PayPalButtons } from '@paypal/react-paypal-js';
+
+// Renders errors or successfull transactions on the screen.
+function Message({ content }) {
+  return <p>{content}</p>;
+}
 
 function App() {
   const initialOptions = {
-    'client-id':
-      'ATcbsWeJib7eBUta2p5NaO64gvVFwIjJV2vEBu9wfP_ALWWiUtlxuo0OHxeCBsv807oldJyihRjS5AzR',
+    'client-id': 'PAYPAL_CLIENT_ID',
     'enable-funding': 'paylater,venmo',
+    'data-sdk-integration-source': 'integrationbuilder_ac',
   };
+
+  const [message, setMessage] = useState('');
 
   return (
     <div className="App">
@@ -14,14 +21,17 @@ function App() {
         <PayPalButtons
           style={{
             shape: 'rect',
-            // color: fundingSource === FUNDING.PAYLATER ? 'gold' : '',
+            //color:'blue' change the default color of the buttons
+            layout: 'vertical', //default value. Can be changed to horizontal
           }}
           createOrder={async () => {
             try {
               const response = await fetch('/api/orders', {
                 method: 'POST',
-                'Content-Type': 'application/json',
-                // use the 'body' param to optionally pass additional order information
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                // use the "body" param to optionally pass additional order information
                 // like product ids and quantities
                 body: JSON.stringify({
                   cart: [
@@ -33,11 +43,23 @@ function App() {
                 }),
               });
 
-              const details = await response.json();
-              return details.id;
+              const orderData = await response.json();
+
+              if (orderData.id) {
+                return orderData.id;
+              } else {
+                const errorDetail = orderData?.details?.[0];
+                const errorMessage = errorDetail
+                  ? `${errorDetail.issue} ${errorDetail.description} (${orderData.debug_id})`
+                  : JSON.stringify(orderData);
+
+                throw new Error(errorMessage);
+              }
             } catch (error) {
               console.error(error);
-              // Handle the error or display an appropriate error message to the user
+              setMessage(
+                `Could not initiate PayPal Checkout...${error}`,
+              );
             }
           }}
           onApprove={async (data, actions) => {
@@ -52,53 +74,47 @@ function App() {
                 },
               );
 
-              const details = await response.json();
+              const orderData = await response.json();
               // Three cases to handle:
               //   (1) Recoverable INSTRUMENT_DECLINED -> call actions.restart()
               //   (2) Other non-recoverable errors -> Show a failure message
               //   (3) Successful transaction -> Show confirmation or thank you message
 
-              // This example reads a v2/checkout/orders capture response, propagated from the server
-              // You could use a different API or structure for your 'orderData'
-              const errorDetail =
-                Array.isArray(details.details) && details.details[0];
+              const errorDetail = orderData?.details?.[0];
 
-              if (errorDetail && errorDetail.issue === 'INSTRUMENT_DECLINED') {
+              if (errorDetail?.issue === 'INSTRUMENT_DECLINED') {
+                // (1) Recoverable INSTRUMENT_DECLINED -> call actions.restart()
+                // recoverable state, per https://developer.paypal.com/docs/checkout/standard/customize/handle-funding-failures/
                 return actions.restart();
-                // https://developer.paypal.com/docs/checkout/integration-features/funding-failure/
+              } else if (errorDetail) {
+                // (2) Other non-recoverable errors -> Show a failure message
+                throw new Error(
+                  `${errorDetail.description} (${orderData.debug_id})`,
+                );
+              } else {
+                // (3) Successful transaction -> Show confirmation or thank you message
+                // Or go to another URL:  actions.redirect('thank_you.html');
+                const transaction =
+                  orderData.purchase_units[0].payments.captures[0];
+                  setMessage(
+                  `Transaction ${transaction.status}: ${transaction.id}. See console for all available details`,
+                );
+                console.log(
+                  'Capture result',
+                  orderData,
+                  JSON.stringify(orderData, null, 2),
+                );
               }
-
-              if (errorDetail) {
-                let msg = 'Sorry, your transaction could not be processed.';
-                msg += errorDetail.description
-                  ? ' ' + errorDetail.description
-                  : '';
-                msg += details.debug_id ? ' (' + details.debug_id + ')' : '';
-                alert(msg);
-              }
-
-              // Successful capture! For demo purposes:
-              console.log(
-                'Capture result',
-                details,
-                JSON.stringify(details, null, 2),
-              );
-              const transaction =
-                details.purchase_units[0].payments.captures[0];
-              alert(
-                'Transaction ' +
-                  transaction.status +
-                  ': ' +
-                  transaction.id +
-                  '. See console for all available details',
-              );
             } catch (error) {
               console.error(error);
-              // Handle the error or display an appropriate error message to the user
+              setMessage(
+                `Sorry, your transaction could not be processed...${error}`,
+              );
             }
           }}
         />
       </PayPalScriptProvider>
+      <Message content={message} />
     </div>
   );
 }
