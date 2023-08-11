@@ -36,7 +36,7 @@ You can clone this repo and follow the instructions below or run it on [Stackbli
 ### Config Backend
 
 - Rename the `.env.example` file to .env.
-- Inside of the `.env` file, enter your PayPal client ID for the `PAYPAL_CLIENT_ID` and your PayPal app secret for the `PAYPAL_APP_SECRET` enviroment variables.
+- Inside of the `.env` file, enter your PayPal client ID for the `PAYPAL_CLIENT_ID` and your PayPal app secret for the `PAYPAL_CLIENT_SECRET` enviroment variables.
 - Run npm install in your terminal
 - Run npm start in your terminal (this will run the server separetly from the frontend)
 
