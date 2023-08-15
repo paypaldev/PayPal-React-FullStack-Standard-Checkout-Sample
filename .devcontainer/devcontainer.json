@@ -1,0 +1,46 @@
+// For more details, see https://aka.ms/devcontainer.json.
+{
+    "name": "PayPal React FullStack Standard Checkout Sample",
+    "image": "mcr.microsoft.com/devcontainers/universal:2",
+  
+    // Use 'onCreateCommand' to run commands when creating the container.
+    "onCreateCommand": "bash ./.devcontainer/welcome-message.sh",
+  
+    // Use 'postCreateCommand' to run commands after the container is created.
+    "postCreateCommand": "npm install",
+  
+    // Use 'postAttachCommand' to run commands when attaching to the container.
+    "postAttachCommand": {
+      "Start server": "npm start"
+    },
+  
+    // Use 'forwardPorts' to make a list of ports inside the container available locally.
+    "forwardPorts": [9597],
+    "portsAttributes": {
+      "9597": {
+        "label": "Preview of PayPal JavasScript FullStack Standard Checkout",
+        "onAutoForward": "openBrowserOnce"
+      }
+    },
+  
+    "secrets": {
+      "PAYPAL_CLIENT_ID": {
+        "description": "Sandbox Client ID of the application.",
+        "documentationUrl": "https://developer.paypal.com/dashboard/applications/sandbox"
+      },
+      "PAYPAL_CLIENT_SECRET": {
+        "description": "Sandbox Client Secret of the application.",
+        "documentationUrl": "https://developer.paypal.com/dashboard/applications/sandbox"
+      }
+    },
+  
+    "customizations": {
+      "vscode": {
+        "extensions": ["vsls-contrib.codetour"],
+        "settings": {
+          "git.openRepositoryInParentFolders": "always"
+        }
+      }
+    }
+  }
+  
