@@ -31,21 +31,21 @@ You can clone this repo and follow the instructions below or run it on [Stackbli
 - Rename the `.env.example` file to `.env`.
 - Inside of `the App.jsx` file, enter your PayPal `client-id` inside the `initialOptions` object.
 - Run npm install in your terminal
-- Run npm start in your terminal (this will run the server separetly from the backend)
+- Run npm start in your terminal (this will run the server separately from the backend)
 
 ### Config Backend
 
 - Rename the `.env.example` file to .env.
-- Inside of the `.env` file, enter your PayPal client ID for the `PAYPAL_CLIENT_ID` and your PayPal app secret for the `PAYPAL_CLIENT_SECRET` enviroment variables.
+- Inside the `.env` file, enter your PayPal client ID for the `PAYPAL_CLIENT_ID` and your PayPal app secret for the `PAYPAL_CLIENT_SECRET` environment variables.
 - Run npm install in your terminal
-- Run npm start in your terminal (this will run the server separetly from the frontend)
+- Run npm start in your terminal (this will run the server separately from the frontend)
 
 ### Run app
 
 In the root folder, run `npm start` in your terminal. This will run the backend and frontend at the same time.
 
-- Navigate in your browswer to `http://localhost:3000/`
-- I'm able to have my frontend and backend server similute they are in the same server port by adding `"proxy": "http://localhost:9597"` to my frontend `package.json`.
+- Navigate in your browser to `http://localhost:3000/`
+- I'm able to have my frontend and backend server similar they are in the same server port by adding `"proxy": "http://localhost:9597"` to my frontend `package.json`.
 
 ### Sample Card
 
@@ -59,7 +59,7 @@ CVV: `123`
 
 ## PayPal Developer Community
 
-The PayPal Developer community helps you build your career while improving your products and the developer experience. You’ll be able to contribute code and documentation, meet new people and learn from the open-source community.
+The PayPal Developer community helps you build your career while improving your products and the developer experience. You’ll be able to contribute code and documentation, meet new people, and learn from the open-source community.
 
 - Website: [developer.paypal.com](https://developer.paypal.com)
 - Twitter: [@paypaldev](https://twitter.com/paypaldev)
