@@ -24,7 +24,12 @@ This sample app shows you how to integrate PayPal into your React app for the [s
 
 ## Run this project
 
-You can clone this repo and follow the instructions below or run it on [Stackblitz](https://stackblitz.com/edit/stackblitz-webcontainer-api-starter-nvw8fy?file=README.md) and follow the instructions below.
+### PayPal Codespaces
+[![Open Code In GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/paypaldev/PayPal-React-FullStack-Standard-Checkout-Sample?devcontainer_path=.devcontainer%2Fdevcontainer.json)
+
+### Locally
+
+Follow the instructions below.
 
 ### Config Frontend
 
