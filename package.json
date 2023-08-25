@@ -16,6 +16,7 @@
   },
   "scripts": {
     "front": "react-scripts start",
+    "deps": "npm i && npm --prefix ./backend install",
     "back": "npm start --prefix backend",
     "build": "react-scripts build",
     "test": "react-scripts test",
