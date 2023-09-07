@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { PayPalScriptProvider, PayPalButtons } from '@paypal/react-paypal-js';
+import React, { useState } from "react";
+import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 
 // Renders errors or successfull transactions on the screen.
 function Message({ content }) {
@@ -8,36 +8,36 @@ function Message({ content }) {
 
 function App() {
   const initialOptions = {
-    'client-id': 'YOUR_PAYPAL_CLIENT_ID',
-    'enable-funding': 'paylater,venmo',
-    'data-sdk-integration-source': 'integrationbuilder_sc',
+    "client-id": "YOUR_PAYPAL_CLIENT_ID",
+    "enable-funding": "paylater,venmo",
+    "data-sdk-integration-source": "integrationbuilder_sc",
   };
 
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState("");
 
   return (
     <div className="App">
       <PayPalScriptProvider options={initialOptions}>
         <PayPalButtons
           style={{
-            shape: 'rect',
+            shape: "rect",
             //color:'blue' change the default color of the buttons
-            layout: 'vertical', //default value. Can be changed to horizontal
+            layout: "vertical", //default value. Can be changed to horizontal
           }}
           createOrder={async () => {
             try {
-              const response = await fetch('/api/orders', {
-                method: 'POST',
+              const response = await fetch("/api/orders", {
+                method: "POST",
                 headers: {
-                  'Content-Type': 'application/json',
+                  "Content-Type": "application/json",
                 },
                 // use the "body" param to optionally pass additional order information
                 // like product ids and quantities
                 body: JSON.stringify({
                   cart: [
                     {
-                      id: 'YOUR_PRODUCT_ID',
-                      quantity: 'YOUR_PRODUCT_QUANTITY',
+                      id: "YOUR_PRODUCT_ID",
+                      quantity: "YOUR_PRODUCT_QUANTITY",
                     },
                   ],
                 }),
@@ -57,9 +57,7 @@ function App() {
               }
             } catch (error) {
               console.error(error);
-              setMessage(
-                `Could not initiate PayPal Checkout...${error}`,
-              );
+              setMessage(`Could not initiate PayPal Checkout...${error}`);
             }
           }}
           onApprove={async (data, actions) => {
@@ -67,9 +65,9 @@ function App() {
               const response = await fetch(
                 `/api/orders/${data.orderID}/capture`,
                 {
-                  method: 'POST',
+                  method: "POST",
                   headers: {
-                    'Content-Type': 'application/json',
+                    "Content-Type": "application/json",
                   },
                 },
               );
@@ -82,7 +80,7 @@ function App() {
 
               const errorDetail = orderData?.details?.[0];
 
-              if (errorDetail?.issue === 'INSTRUMENT_DECLINED') {
+              if (errorDetail?.issue === "INSTRUMENT_DECLINED") {
                 // (1) Recoverable INSTRUMENT_DECLINED -> call actions.restart()
                 // recoverable state, per https://developer.paypal.com/docs/checkout/standard/customize/handle-funding-failures/
                 return actions.restart();
@@ -96,11 +94,11 @@ function App() {
                 // Or go to another URL:  actions.redirect('thank_you.html');
                 const transaction =
                   orderData.purchase_units[0].payments.captures[0];
-                  setMessage(
+                setMessage(
                   `Transaction ${transaction.status}: ${transaction.id}. See console for all available details`,
                 );
                 console.log(
-                  'Capture result',
+                  "Capture result",
                   orderData,
                   JSON.stringify(orderData, null, 2),
                 );
