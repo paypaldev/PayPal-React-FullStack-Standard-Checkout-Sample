@@ -1,6 +1,6 @@
 {
-  "name": "ib-si-react",
-  "version": "0.1.0",
+  "name": "paypal-standard-integration-react-ib",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
   "dependencies": {
